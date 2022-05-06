@@ -1,0 +1,197 @@
+:root {
+    --main: #000000;
+    --second: #52057B;
+    --third: #892CDC;
+    --contrast: #BC6FF1;
+}
+
+@font-face {
+    font-family: "Honey";
+    src: url("fonts/Honey-Notes-BE/Honey\ Notes\ DEMO.ttf");
+}
+
+@font-face {
+    font-family: "Jorell";
+    src: url("fonts/Jorell-Lieven-Demo/13 Jorell Lieven/Jorell Lieven Demo.ttf");
+}
+
+header {
+    overflow: visible;
+    width: 47.5em;
+    height: 1em;
+    background-color: var(--main);
+    border: solid;
+    border-radius: 1em;
+    padding: 2em 0 2em 0;
+    margin: 1em;   
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+}
+
+header img {
+    margin: 0;
+    padding: 0;
+    width: 10em;
+    height: 10em;
+}
+
+header h1 {
+    font-family: "Jorell";
+    font-size: 3em;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+    color: var(--contrast);
+    font-family: "Honey";
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+div {
+    margin: 1em;
+    padding: .05em 2em 2em 2em;
+    background-color: var(--main);
+    border: solid;
+    border-radius: 1em;
+    display: grid;
+}
+
+button {
+    background-color: var(--contrast);
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    width: 16em;
+    height: 5em;
+    margin: 0;
+    box-shadow: .5em .5em 0 0 var(--main);
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    top: 1em;
+}
+
+button img {
+    width: 7em;
+    height: 7em;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+button p {
+    margin: 0;
+    font-size: 2em;
+    line-height: .75em;
+    font-family: "Honey";
+    color: var(--second);
+}
+
+button a {
+    text-decoration: none;
+}
+
+button:hover {
+    animation: glow_dark 500ms ease forwards;
+}
+
+button:active {
+    width: 14em;
+    height: 4em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+button:active img {
+    width: 6em;
+    height: 6em;
+}
+
+button:active p {
+    font-size: 1.65em;
+}
+
+p {
+    font-size: 2.5em;
+    margin-bottom: .1em;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+
+label {
+    margin: .5em;
+    font-size: 1.3em;
+}
+
+img {
+    width: 3em;
+    height: 3em;
+    vertical-align: middle;
+}
+
+footer {
+    font-family: "Jorell";
+    font-size: 1.2em;
+    background-color: var(--main);
+    border: solid;
+    border-radius: 1em;
+    padding: .5em;
+    display: inline-flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+footer img {
+    border: none;
+    border-radius: 50%;
+}
+
+footer img:hover {
+    animation: glow_img 500ms ease forwards;
+}
+
+#text_link {
+    text-decoration: none;
+    color: var(--main);
+    background-color: var(--third);
+    padding: .15em .5em .15em .5em;
+    border-radius: 1em;
+}
+
+#text_link:hover {
+    animation: glow_bright 500ms ease forwards;
+}
+
+#text_link:visited {
+    text-decoration: none;
+    color: var(--contrast);
+    background-color: transparent;
+    box-shadow: 0 0 .7em 0 var(--contrast);
+}
+
+@keyframes glow_img {
+    to {
+        box-shadow:inset 0 0 0 .5em var(--contrast), -.035em -.04em 0 .2em var(--contrast);
+    }
+}
+
+@keyframes glow_bright {
+    to {
+        box-shadow: 0 0 .7em 0 var(--contrast);
+    }
+}
+
+@keyframes glow_dark {
+    to {
+        top: .5em;
+        box-shadow: 1em 1em 0 0 var(--main);
+    }
+}
